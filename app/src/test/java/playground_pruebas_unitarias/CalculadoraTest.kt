@@ -12,8 +12,15 @@ class CalculadoraTest {
 
     @Test
     fun sumar_dosNumerosPositivos() {
-        val resultado = sumar(3, 5)
 
+        // ARRANGE: preparamos los datos
+        val numero1 = 3
+        val numero2 = 5
+
+        // ACT: ejecutamos la función
+        val resultado = sumar(numero1, numero2)
+
+        // ASSERT: comprobamos el resultado
         assertEquals(8, resultado)
     }
 
