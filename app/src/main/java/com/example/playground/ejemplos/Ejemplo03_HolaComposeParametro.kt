@@ -23,7 +23,7 @@ fun Ejemplo03_HolaComposeParametro(
 
     //Text, componente visual que muestra texto en pantalla
     Text(
-        text = "Hola, Jetpack Compose"
+        text = "Adios, Jetpack Compose"
         ,color = color
 
         //Modifier, es muy importante, define como se va a comportar un componente!!!

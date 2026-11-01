@@ -13,7 +13,7 @@ fun Ejemplo06_ListaPersonas() {
     Column(
         modifier = Modifier.padding(16.dp)
     ) {
-        Text("Mis personas")
+        Text("Mis panas")
 
         Ejemplo05_TarjetaPersona(
             nombre = "Ana",

@@ -28,7 +28,6 @@ fun Ejemplo04_Contador() {
         Text(
             text = "Contador: $contador"
         )
-
         // Creamos un botón que modifica el contador
         Button(
             onClick = {

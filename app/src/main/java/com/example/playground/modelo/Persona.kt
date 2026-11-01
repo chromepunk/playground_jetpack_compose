@@ -1,4 +1,4 @@
-package com.example.playground.ejemplos
+package com.example.playground.modelo
 
 data class Persona(
     val nombre: String,

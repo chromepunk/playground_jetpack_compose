@@ -18,6 +18,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.example.playground.modelo.Persona
 
 //tenemos que añadir en gradle la expresion
 //implementation("androidx.navigation:navigation-compose:2.9.4")
@@ -25,7 +26,7 @@ import androidx.navigation.navArgument
 @Composable
 fun Ejemplo08_Navegacion() {
 
-    // Nuestros datos
+    // Nuestros datos: desde servidor json, deserializarlo.
     val personas = listOf(
         Persona("Ana", 25),
         Persona("Luis", 42),
@@ -48,6 +49,7 @@ fun Ejemplo08_Navegacion() {
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(16.dp),
+
                 verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
                 Text(
@@ -67,7 +69,7 @@ fun Ejemplo08_Navegacion() {
 
                             Button(
                                 onClick = {
-                                    navController.navigate("detalle/$indice")
+//                                    navController.navigate("detalle/$indice")
                                 }
                             ) {
                                 Text("Ver detalle")

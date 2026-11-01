@@ -21,8 +21,8 @@ fun Ejemplo02_Columna() {
         Ejemplo01_HolaCompose()
         //una pregunta que pasaria si quisieramos que este
         //texto tuviera otro color?
-        //Ejemplo03_HolaComposeParametro(color = Color.Blue)
+        Ejemplo03_HolaComposeParametro(Color.Red)
         Ejemplo01_HolaCompose()
-        Ejemplo01_HolaCompose()
+       // Ejemplo01_HolaCompose()
     }
 }

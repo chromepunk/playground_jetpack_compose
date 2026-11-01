@@ -22,7 +22,7 @@ fun Ejemplo01_HolaCompose() {
     //Text, componente visual que muestra texto en pantalla
     Text(
         text = "Hola, Jetpack Compose"
-        // ,fontSize = 30.sp
+        ,fontSize = 25.sp
         // ,color = Color.Red
         // ,fontWeight = FontWeight.Bold
         // ,fontStyle = FontStyle.Italic
