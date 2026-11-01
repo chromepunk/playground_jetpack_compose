@@ -25,4 +25,32 @@ class CalculadoraTest {
 
         assertEquals(6, resultado)
     }
+
+    @Test
+    fun sumar_dosCeros() {
+        val resultado = sumar(0, 0)
+
+        assertEquals(0, resultado)
+    }
+
+    @Test
+    fun sumar_unNumeroYUnCero() {
+        val resultado = sumar(25, 0)
+
+        assertEquals(25, resultado)
+    }
+
+    @Test
+    fun sumar_numerosGrandes() {
+        val resultado = sumar(1000000, 2000000)
+
+        assertEquals(3000000, resultado)
+    }
+
+    @Test
+    fun sumar_superaElLimiteDeInt() {
+        val resultado = sumar(Int.MAX_VALUE, 1)
+
+        assertEquals(Int.MAX_VALUE.toLong() + 1L, resultado.toLong())
+    }
 }
