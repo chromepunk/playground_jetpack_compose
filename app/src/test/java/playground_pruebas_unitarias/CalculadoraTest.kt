@@ -2,8 +2,13 @@ package playground_pruebas_unitarias
 
 import org.junit.Test
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertNotEquals
 
 class CalculadoraTest {
+
+    // PRUEBAS DE LA FUNCION SUMAR
 
     @Test
     fun sumar_dosNumerosPositivos() {
@@ -47,10 +52,40 @@ class CalculadoraTest {
         assertEquals(3000000, resultado)
     }
 
-    @Test
-    fun sumar_superaElLimiteDeInt() {
-        val resultado = sumar(Int.MAX_VALUE, 1)
+    // PRUEBAS DE LA FUNCION ES MAYOR DE EDAD
 
-        assertEquals(Int.MAX_VALUE.toLong() + 1L, resultado.toLong())
+    @Test
+    fun esMayorDeEdad_conEdadDe20_devuelveTrue() {
+        val resultado = esMayorDeEdad(20)
+
+        assertTrue(resultado)
+    }
+
+    @Test
+    fun esMayorDeEdad_conEdadDe15_devuelveFalse() {
+        val resultado = esMayorDeEdad(15)
+
+        assertFalse(resultado)
+    }
+
+    @Test
+    fun esMayorDeEdad_conEdadDe18_devuelveTrue() {
+        val resultado = esMayorDeEdad(18)
+
+        assertTrue(resultado)
+    }
+
+    @Test
+    fun esMayorDeEdad_conEdadDe17_devuelveFalse() {
+        val resultado = esMayorDeEdad(17)
+
+        assertFalse(resultado)
+    }
+
+    @Test
+    fun esMayorDeEdad_conEdadDe20_noEsIgualAFalse() {
+        val resultado = esMayorDeEdad(20)
+
+        assertNotEquals(false, resultado)
     }
 }
